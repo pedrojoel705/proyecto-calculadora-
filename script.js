@@ -26,6 +26,9 @@ function reset() {
 function validateForm () {
     if(inputPrincipal.value <= 0) {
         errorMessageElement.style.display = 'block';
+        alert('Insert a positive number');
+        inputPrincipal.focus();
+
     } else if (errorMessageElement.style.display === 'block') {
         errorMessageElement.style.display = 'none';
     }
