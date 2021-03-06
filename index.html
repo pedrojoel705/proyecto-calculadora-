@@ -9,20 +9,44 @@
 <body>
     <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
-        <label>Amount</label> <input type="number" id="principal"> <br />
-        <label>Interest Rate</label> <input type="range" name="number" id="rate" min="1" max="20" step="0.25"
-            value="10.25"><span id="resultRange">10.25%</span><br>
-        <label>No. of Years in</label> <input type="number" name="" id="years" min="1" max="10"><br />
+
+        <!-- Amount -->
+
+        <label>Amount</label> 
+        <input type="number" id="principal"> 
+        <span class="error-message">Insert a possitive number</span>
+        <br />
+
+        <!-- Interest -->
+
+        <label>Interest Rate</label> 
+        <input 
+          type="range" 
+          name="number" 
+          id="rate" 
+          min="1" 
+          max="20" 
+          step="0.25"
+          value="10.25"
+          oninput="updateRangeSpan"
+          >
+
+          <span id="resultRange">10.25%</span><br>
+
+        <!-- No. Years -->
+
+        <label>No. of Years in</label> 
+        <input type="number" name="" id="years" min="1" max="10">
+        <br />
+
+        <!-- Actions -->
 
         <button onclick="compute()">Calcular Interes</button>
-        <span id="resultCompute"></span>
-
+        <div  id="resultCompute"></div>
 
         <footer> &copy;Evreryone Can Get Rich</footer>
 
     </div>
-
-
 
     <script src="script.js"></script>
 </body>
